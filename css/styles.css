@@ -787,17 +787,39 @@ margin-bottom: 20px;
 
 .modal-field {
    margin-bottom: 15px;
+   }
 
+/* ---input+icon-block--- */
+.input-wrap {
+   position: relative;
 }
+
+/* ---box---input--- */
 .modal-input {
    width: 100%;
    height: 45px;
    background-color: transparent;
-   border: 1px solid #999999;
+   border: 1px solid #9da4bd;
    border-radius: 5px;
    font-size: 12px;
    color: #2c46ae;
-   padding-left: 15px;
+   padding-left: 25px;
+   outline: none;
+   } 
+
+   .modal-input:focus {
+      border-color: var(--accent-color);
+   }
+
+   .modal-input:focus + .input-icon {
+      fill: var(--accent-color)
+   }
+ 
+   .input-icon {
+      position: absolute;
+      left: 5px;
+      top: 50%;
+      transform: translateY(-50%)
    }
 
    .modal-input::placeholder {
@@ -818,5 +840,66 @@ background-color: rgba(51, 228, 51, 0.322);
    font-size: 12px;
    margin-bottom: 5px;
 }
-       
 
+.modal-coment {
+   width: 100%;
+   height: 100px;
+   border: 1px solid #999999;
+   border-radius: 5px;
+   background-color: transparent;
+   outline: none;
+   padding: 10px;
+   resize: none;  
+}
+       
+.modal-coment::placeholder {
+ font-size: 14px;
+      color: blueviolet;  
+ }
+
+ .check-text {
+   font-size: 14px;
+   display: flex;
+   align-items: center;
+ }
+
+ .check-text span {
+  width: 16px;
+   height: 16px;
+   border: 2px solid #000000;
+   border-radius: 3px;
+   margin-right: 7px;
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+   fill: transparent;
+ }
+
+ .input-check:checked + .check-text span {
+background-color: var(--accent-color);
+border: none;
+fill: #f4f4fd;
+ }
+
+
+ /* .check-icon { 
+   fill: transparent;
+ }*/
+
+
+ /* .check-text::before {
+   content: "";
+   width: 16px;
+   height: 16px;
+   border: 2px solid #000000;
+   border-radius: 3px;
+   margin-right: 7px;
+ }
+
+ .input-check:checked + .check-text::before {
+    background-color: var(--accent-color);
+    border: none;
+    background-image: url(../img/check.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+ } */
